@@ -1,3 +1,4 @@
+import { Link } from "@tanstack/react-router";
 import { motion, useScroll, useTransform } from "motion/react";
 import { useRef } from "react";
 
@@ -33,7 +34,10 @@ export function Hero() {
         >
           <span className="text-foreground">N.V — 26</span>
           <span className="hidden md:block">Brand · Design · Management</span>
-          <span>Bangkok / Everywhere</span>
+          <Link to="/cv" className="text-acid transition-colors hover:text-magenta">
+            CV / Resumé ↗
+          </Link>
+
         </motion.header>
 
         <motion.div style={{ y, scale, skewY: skew, opacity: fade }} className="relative z-10 px-5 md:px-10">
