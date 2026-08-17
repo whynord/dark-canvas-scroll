@@ -1,8 +1,6 @@
 import { motion, useScroll, useTransform } from "motion/react";
 import { useRef } from "react";
 
-import triptych from "@/assets/nord-triptych.png.asset.json";
-
 const CORE = [
   "Marketing",
   "Digital Marketing",
@@ -49,10 +47,14 @@ export function CvEducation() {
     <section ref={ref} className="grain relative border-y border-border">
       <div className="grid md:grid-cols-2">
         <div className="relative h-[60svh] overflow-hidden md:h-auto">
+          <div aria-hidden className="absolute inset-0 riot-bg" />
           <motion.img
-            src={triptych.url}
+            src="/nord-triptych.png"
             alt="Three black and white portraits of Nord Varavarn with light streaks"
             style={{ y: imgY }}
+            onError={(e) => {
+              e.currentTarget.style.visibility = "hidden";
+            }}
             className="absolute inset-0 h-[124%] w-full object-cover"
           />
           <div aria-hidden className="absolute inset-0 bg-void/35 mix-blend-multiply" />

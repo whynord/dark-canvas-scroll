@@ -2,9 +2,6 @@ import { Link } from "@tanstack/react-router";
 import { motion, useScroll, useTransform } from "motion/react";
 import { useRef } from "react";
 
-import cvPdf from "@/assets/nord-cv.pdf.asset.json";
-import suit from "@/assets/nord-suit.png.asset.json";
-
 export function CvContact() {
   const ref = useRef<HTMLElement>(null);
   const { scrollYProgress } = useScroll({ target: ref, offset: ["start end", "end end"] });
@@ -77,10 +74,14 @@ export function CvContact() {
         </ul>
 
         <div className="relative overflow-hidden border border-border">
+          <div aria-hidden className="absolute inset-0 riot-bg" />
           <motion.img
-            src={suit.url}
+            src="/nord-suit.png"
             alt="Panpong Varavarn in a grey suit standing by a window"
             style={{ y: imgY }}
+            onError={(e) => {
+              e.currentTarget.style.visibility = "hidden";
+            }}
             className="h-[118%] w-full object-cover object-top opacity-90"
           />
         </div>
@@ -88,7 +89,7 @@ export function CvContact() {
 
       <div className="mt-12 flex flex-wrap gap-3">
         <a
-          href={cvPdf.url}
+          href="/PanpongVaravarn-CV2026-Dark.pdf"
           target="_blank"
           rel="noreferrer"
           className="border border-acid px-6 py-3 font-mono text-[0.68rem] uppercase tracking-[0.28em] text-acid transition-colors hover:bg-acid hover:text-void"

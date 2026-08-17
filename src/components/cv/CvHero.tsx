@@ -1,8 +1,6 @@
 import { motion, useScroll, useTransform } from "motion/react";
 import { useRef } from "react";
 
-import motionPortrait from "@/assets/nord-motion.png.asset.json";
-
 export function CvHero() {
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({ target: ref, offset: ["start start", "end start"] });
@@ -14,10 +12,14 @@ export function CvHero() {
   return (
     <section ref={ref} className="grain relative h-[135svh]">
       <div className="sticky top-0 h-svh overflow-hidden">
+        <div aria-hidden className="absolute inset-0 riot-bg" />
         <motion.img
-          src={motionPortrait.url}
+          src="/nord-motion.png"
           alt="Panpong 'Nord' Varavarn walking, motion-blurred studio portrait"
           style={{ y: imgY, scale: imgScale }}
+          onError={(e) => {
+            e.currentTarget.style.visibility = "hidden";
+          }}
           className="absolute inset-0 h-full w-full object-cover object-center opacity-70 grayscale"
         />
         <div
