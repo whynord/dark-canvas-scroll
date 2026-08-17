@@ -14,13 +14,13 @@ export function CvHero() {
       <div className="sticky top-0 h-svh overflow-hidden">
         <div aria-hidden className="absolute inset-0 riot-bg" />
         <motion.img
-          src="/nord-motion.png"
-          alt="Panpong 'Nord' Varavarn walking, motion-blurred studio portrait"
+          src="/nord-cv-hero.png"
+          alt="Panpong 'Nord' Varavarn mid-stride across a neon-lit stage, purple and green spotlights, motion-blur"
           style={{ y: imgY, scale: imgScale }}
           onError={(e) => {
             e.currentTarget.style.visibility = "hidden";
           }}
-          className="absolute inset-0 h-full w-full object-cover object-center opacity-70 grayscale"
+          className="absolute inset-0 h-full w-full object-cover object-center opacity-70"
         />
         <div
           aria-hidden
