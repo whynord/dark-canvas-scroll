@@ -22,5 +22,3 @@ cd <repository-name>
 npm i
 npm run dev
 ```
-
-<!-- deploy nudge 1787013423 -->
