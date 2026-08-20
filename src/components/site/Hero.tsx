@@ -37,10 +37,12 @@ export function Hero() {
           <Link to="/cv" className="text-acid transition-colors hover:text-magenta">
             CV / Resumé ↗
           </Link>
-
         </motion.header>
 
-        <motion.div style={{ y, scale, skewY: skew, opacity: fade }} className="relative z-10 px-5 md:px-10">
+        <motion.div
+          style={{ y, scale, skewY: skew, opacity: fade }}
+          className="relative z-10 px-5 md:px-10"
+        >
           <p className="mb-6 max-w-xs font-mono text-xs leading-relaxed uppercase tracking-[0.2em] text-acid">
             ↳ scroll if you dare
           </p>
@@ -60,7 +62,7 @@ export function Hero() {
             keeps them alive after the launch deck closes.
           </p>
           <p className="font-mono text-[0.68rem] uppercase tracking-[0.3em] text-magenta">
-            14 yrs · 60+ launches · 3 disciplines
+            25 yrs · 60+ launches · 3 disciplines
           </p>
         </motion.div>
       </div>

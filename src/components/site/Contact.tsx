@@ -9,7 +9,11 @@ export function Contact() {
   const letter = useTransform(scrollYProgress, [0, 1], ["0.3em", "-0.02em"]);
 
   return (
-    <section ref={ref} id="contact" className="grain relative min-h-svh px-5 pb-10 pt-[16vh] md:px-10">
+    <section
+      ref={ref}
+      id="contact"
+      className="grain relative min-h-svh px-5 pb-10 pt-[16vh] md:px-10"
+    >
       <p className="mb-12 font-mono text-[0.68rem] uppercase tracking-[0.32em] text-acid">
         004 — Open for trouble
       </p>
@@ -42,13 +46,36 @@ export function Contact() {
             Elsewhere
           </p>
           <ul className="mt-2 space-y-1 text-lg">
-            {["Instagram", "LinkedIn", "Are.na"].map((s) => (
-              <li key={s}>
-                <a href="#" className="transition-colors hover:text-acid">
-                  {s} ↗
-                </a>
-              </li>
-            ))}
+            <li>
+              <a
+                href="https://instagram.com/whynord"
+                target="_blank"
+                rel="noreferrer"
+                className="transition-colors hover:text-acid"
+              >
+                Instagram ↗
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://linkedin.com/in/whynord"
+                target="_blank"
+                rel="noreferrer"
+                className="transition-colors hover:text-acid"
+              >
+                LinkedIn ↗
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.are.na/whynord"
+                target="_blank"
+                rel="noreferrer"
+                className="transition-colors hover:text-acid"
+              >
+                Are.na ↗
+              </a>
+            </li>
           </ul>
         </div>
         <div>
